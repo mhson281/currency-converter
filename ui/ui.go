@@ -15,17 +15,17 @@ func BuildUI() fyne.CanvasObject {
 	amountEntry := widget.NewEntry()
 	amountEntry.SetPlaceHolder("Enter amount")
 
-	fromCurrency :=widget.NewSelect([]string{"USD", "EUR", "GBP", "VND"}, nil)
+	fromCurrency := widget.NewSelect([]string{"USD", "EUR", "GBP", "VND"}, nil)
 	fromCurrency.PlaceHolder = "From"
 
-	toCurrency :=widget.NewSelect([]string{"USD", "EUR", "GBP", "VND"}, nil)
+	toCurrency := widget.NewSelect([]string{"USD", "EUR", "GBP", "VND"}, nil)
 	toCurrency.PlaceHolder = "To"
 
 	resultLabel := widget.NewLabel("Result: ")
-	
+
 	convertButton := widget.NewButton("Convert", func() {
 		amount, err := strconv.ParseFloat(amountEntry.Text, 64)
-		
+
 		if err != nil {
 			resultLabel.SetText("Invalid amount")
 		}
@@ -51,10 +51,10 @@ func BuildUI() fyne.CanvasObject {
 	form := container.NewVBox(
 		widget.NewLabel("Currency Converter"),
 		amountEntry,
-	  fromCurrency,
-	  toCurrency,
-	  convertButton,
-	  resultLabel
+		fromCurrency,
+		toCurrency,
+		convertButton,
+		resultLabel,
 	)
 
 	return form
