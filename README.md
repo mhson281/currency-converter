@@ -56,11 +56,11 @@ go run main.go
 
 Some screenshots for reference:
 
-[select-from](./assets/screenshots/select_from_currency.png)
+![select-from](./assets/screenshots/select_from_currency.png)
 
-[select-to](./assets/screenshots/select_to_currency.png)
+![select-to](./assets/screenshots/select_to_currency.png)
 
-[result](./assets/screenshots/result.png)
+![result](./assets/screenshots/result.png)
 
 ## Project Structure
 
