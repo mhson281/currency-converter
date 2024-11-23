@@ -64,6 +64,7 @@ Some screenshots for reference:
 
 ## Project Structure
 
+```plaintext
 currency-converter/
 ├── main.go         # Application entry point
 ├── api/
@@ -73,6 +74,8 @@ currency-converter/
 ├── .env            # Environment file for API keys (not included in the repo)
 ├── go.mod          # Go module file
 └── go.sum          # Go checksum file
+
+```
 
 ## Configuration
 
