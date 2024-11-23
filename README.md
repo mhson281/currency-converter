@@ -14,34 +14,55 @@ A simple desktop application built with the Fyne framework in Go for converting 
 
 Screenshots
 
-Main Interface: Add a screenshot of the app UI here if available.
-Installation
-Prerequisites
+Main Interface:
 
-    Go: Ensure you have Go installed on your system. You can download it from https://golang.org/dl/.
+![Main Interface](./assets/screenshots/main_interface.png)
 
-Clone the Repository
+## Installation
 
+### Prerequisites
+
+- Go: Ensure you have Go installed on your system. You can download it from https://golang.org/dl/.
+
+### Instructions
+
+- Clone the Repository:
+
+```bash
 git clone https://github.com/mhson281/currency-converter.git
 cd currency-converter
 
-Install Dependencies
+```
 
+- Install Dependencies
+
+```bash
 go mod tidy
+```
 
-Run the Application
+- Run the Application
 
+```bash
 go run main.go
+```
 
-Usage
+### Usage
 
-    Enter the amount to be converted.
-    Select the source currency (From).
-    Select the target currency (To).
-    Click the Convert button to calculate the converted value.
-    The result will be displayed below, formatted with commas for better readability if the value is large.
+- Enter the amount to be converted.
+- Select the source currency (From).
+- Select the target currency (To).
+- Click the Convert button to calculate the converted value.
+- The result will be displayed below, formatted with commas for better readability if the value is large.
 
-Project Structure
+Some screenshots for reference:
+
+[select-from](./assets/screenshots/select_from_currency.png)
+
+[select-to](./assets/screenshots/select_to_currency.png)
+
+[result](./assets/screenshots/result.png)
+
+## Project Structure
 
 currency-converter/
 ├── main.go         # Application entry point
@@ -53,25 +74,33 @@ currency-converter/
 ├── go.mod          # Go module file
 └── go.sum          # Go checksum file
 
-Configuration
-Setting up the API Key
+## Configuration
 
-The app uses a currency exchange API to fetch the latest rates. Add your API key to the .env file in the root of the project:
+Setting up the API Key:
 
+- The app uses a currency exchange API to fetch the latest rates. Add your API key to the .env file in the root of the project:
+
+```plaintext
 API_KEY=your_api_key_here
+```
 
-If you don’t have an API key, you can get one for free from Open Exchange Rates.
-Dependencies
+- If you don’t have an API key, you can get one for free from [Open Exchange Rates](https://openexchangerates.org/):
+  - Select `sign up` in the top right corner
+  - Sign up for the always free plan
+  - Log in with your newly created acount and generate the API key and plug it in the .env file
 
-    Fyne: Used to build the graphical user interface.
-    GoDotEnv: Used to load environment variables.
-    net/http: Used for making HTTP requests to the API.
-    strconv: Used for parsing and formatting numeric values.
+## Dependencies
+
+- Fyne: Used to build the graphical user interface.
+- GoDotEnv: Used to load environment variables.
+- net/http: Used for making HTTP requests to the API.
+- strconv: Used for parsing and formatting numeric values.
 
 Install dependencies via go mod tidy.
-Future Improvements
 
-    Add support for more currencies.
-    Provide offline mode using locally cached rates.
-    Add historical conversion rates and charts.
-    Improve error handling and support rate-limiting for API requests.
+## Future Improvements
+
+- Add support for more currencies.
+- Provide offline mode using locally cached rates.
+- Add historical conversion rates and charts.
+- Improve error handling and support rate-limiting for API requests.
